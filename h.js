@@ -1,19 +1,19 @@
-const inventory = [];
-let room = "Замок Искорки";
+const inventory = []
+let room = "Замок Искорки"
 
 function showInventory() {
     if (inventory.length === 0) {
-        alert("Рюкзак пуст.");
+        alert("Рюкзак пуст.")
     } else {
-        alert("В рюкзаке: " + inventory.join(", "));
+        alert("В рюкзаке: " + inventory.join(", "))
     }
 }
 
 alert(
-    "MY LITTLE PONY: БЕЗ МАГИИ ИСКОРКИ\n" +
-    "Искорка сидела в своем замке и как обычно читала книги; но заметила, что магия ослабла. чтобы вернуть магию найдите все предметы:\n" +
+    "MY LITTLE PONY: ПОИСК МАГИИ\n" +
+    "Искорка сидела в своем замке и как обычно читала книги  но заметила, что магия ослабла. чтобы вернуть магию найдите все предметы:\n" +
     "лунный цветок, крылатый кристалл, магический самоцвет и ключ."
-);
+)
 
 while (true) {
     if (room === "Замок Искорки") {
@@ -23,12 +23,12 @@ while (true) {
             "2 — Изучить способности предметов\n" +
             "3 — Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
 
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Улица Понивиля";
+            room = "Улица Понивиля"
         } else if (choice === "2") {
             const choice = prompt(
                 "Лунный цветок помогает восстановить магию\n" +
@@ -37,18 +37,18 @@ while (true) {
                 "Древний ключ открывает Храм Гармонии\n" +
                 "1 — Вернуться\n" +
                 "0 — Завершить игру"
-            );
+            )
             if (choice === "0" || choice === null) {
-                break;
+                break
             } else if (choice === "1") {
-                room = "Замок Искорки";
+                room = "Замок Искорки"
             } else {
-                alert("Такого варианта нет.");
+                alert("Такого варианта нет.")
             }
         } else if (choice === "3") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого варианта нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Улица Понивиля") {
@@ -62,12 +62,12 @@ while (true) {
             "6 — Отправиться в Замок Искорки\n" +
             "7 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
 
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Вечнозеленый лес";
+            room = "Вечнозеленый лес"
         } else if (choice === "2") {
             room = "Клаудсейл"
         } else if (choice === "3") {
@@ -79,9 +79,9 @@ while (true) {
         } else if (choice === "6") {
             room = "Замок Искорки"
         } else if (choice === "7") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого варианта нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Вечнозеленый лес") {
@@ -93,22 +93,22 @@ while (true) {
             "4 — Выйти  из леса\n" +
             "5 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
 
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Другой берег болота";
+            room = "Другой берег болота"
         } else if (choice === "2") {
-            room = "Опушка";
+            room = "Опушка"
         } else if (choice === "3") {
-            room = "Дом Зекоры";
+            room = "Дом Зекоры"
         } else if (choice === "4") {
-            room = "Улица Понивиля";
+            room = "Улица Понивиля"
         } else if (choice === "5") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого варианта нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Другой берег болота") {
@@ -118,15 +118,15 @@ while (true) {
             "1 — Вернуться\n" +
             "2 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Вечнозеленый лес";
+            room = "Вечнозеленый лес"
         } else if (choice === "2") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого варианта нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Опушка") {
@@ -135,78 +135,101 @@ while (true) {
             "1 — Вернуться в начало вечнозеленого леса\n" +
             "2 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Вечнозеленый лес";
+            room = "Вечнозеленый лес"
         } else if (choice === "2") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого варианта нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Дом Зекоры") {
-        const choice = prompt(
-            "Может у Зекоры есть Лунный цветок? Поговори с ней!\n" +
-            "1 — Поговорить с Зекорой\n" +
-            "2 — Выйти из дома\n" +
-            "3 - Проверить рюкзак\n" +
-            "0 — Завершить игру"
-        );
-        if (choice === "0" || choice === null) {
-            break;
-        } else if (choice === "2") {
-            room = "Вечнозеленый лес";
-        } else if (choice === "1") {
+        if (inventory.includes("Лунный цветок")) {
             const choice = prompt(
-                "Зекора: Чтобы получить заветный цветок,\n" +
-                " Разгадай загадку – вот мой урок:,\n" +
-                " Не сорвешь её в поле, не купишь в ларьке,\n" +
-                " Она живет лишь в добром и теплом сердце, в руке\n" +
-                "1 — Дружба\n" +
-                "2 — Мама\n" +
-                "3 — Счастье\n" +
-                "4 — Любовь\n" +
-                "5 - Выйти из дома\n " +
-                "6 - Проверить рюкзак\n" +
+                "ДОМ ЗЕКОРЫ\n" +
+                "Тут больше нечего делать\n" +
+                "1 — Выйти из дома\n" +
+                "2 — Проверить рюкзак\n" +
                 "0 — Завершить игру"
-            );
+            )
             if (choice === "0" || choice === null) {
-                break;
+                break
             } else if (choice === "1") {
-                if (inventory.includes("Лунный цветок")) {
-                    alert("Лунный цветок уже у вас.");
-                } else {
-                    const takeKey = confirm("Вы разгадали загадку! Взять цветок?");
+                room = "Вечнозеленый лес"
+            } else if (choice === "2") {
+                showInventory()
+            } else {
+                alert("Такого варианта нет.")
+            }
+        } else {
+            const choice = prompt(
+                "Может у Зекоры есть Лунный цветок? Поговори с ней!\n" +
+                "1 — Поговорить с Зекорой\n" +
+                "2 — Выйти из дома\n" +
+                "3 - Проверить рюкзак\n" +
+                "0 — Завершить игру"
+            )
+            if (choice === "0" || choice === null) {
+                break
+            } else if (choice === "2") {
+                room = "Вечнозеленый лес"
+            } else if (choice === "1") {
+                while (true) {
+                    const choice = prompt(
+                        "Зекора: Чтобы получить заветный цветок,\n" +
+                        " Разгадай загадку – вот мой урок:,\n" +
+                        " Не сорвешь её в поле, не купишь в ларьке,\n" +
+                        " Она живет лишь в добром и теплом сердце, в руке\n" +
+                        "1 — Дружба\n" +
+                        "2 — Мама\n" +
+                        "3 — Счастье\n" +
+                        "4 — Любовь\n" +
+                        "5 - Выйти из дома\n " +
+                        "6 - Проверить рюкзак\n" +
+                        "0 — Завершить игру"
+                    )
+                    if (choice === "0" || choice === null) {
+                        room = "выход"
+                        break
+                    } else if (choice === "1") {
+                        if (inventory.includes("Лунный цветок")) {
+                            alert("Лунный цветок уже у вас.")
+                        } else {
+                            const takeKey = confirm("Вы разгадали загадку! Взять цветок?")
 
-                    if (takeKey === true) {
-                        inventory.push("Лунный цветок");
-                        alert("Лунный цветок взят!");
+                            if (takeKey === true) {
+                                inventory.push("Лунный цветок")
+                                alert("Лунный цветок взят!")
+                            } else {
+                                alert("Вы оставили Лунный цветок.")
+                            }
+                        }
+                        break
+                    } else if (choice === "2") {
+                        alert("Неправильный ответ, подумай еще")
+                    } else if (choice === "3") {
+                        alert("Неправильный ответ, подумай еще")
+                    } else if (choice === "4") {
+                        alert("Неправильный ответ, подумай еще")
+                    } else if (choice === "5") {
+                        room = "Вечнозеленый лес"
+                        break
+                    } else if (choice === "6") {
+                        showInventory()
                     } else {
-                        alert("Вы оставили Лунный цветок.");
+                        alert("Такого варианта нет.")
                     }
                 }
-            } else if (choice === "2") {
-                alert("Неправильный ответ, подумай еще")
             } else if (choice === "3") {
-                alert("Неправильный ответ, подумай еще")
-            } else if (choice === "4") {
-                alert("Неправильный ответ, подумай еще")
-            } else if (choice === "5") {
-                room = "Вечнозеленый лес"
-            } else if (choice === "6") {
-                showInventory();
+                showInventory()
             } else {
-                alert("Такого варианта нет.");
+                alert("Такого варианта нет.")
             }
-        } else if (choice === "3") {
-            showInventory();
-        } else {
-            alert("Такого варианта нет.");
         }
-    }
-    else if (room === "Клаудсейл") {
+    } else if (room === "Клаудсейл") {
         const choice = prompt(
             "КЛАУДСЕЙЛ\n" +
             "1 — Отправиться на Фабрику Погоды\n" +
@@ -215,22 +238,22 @@ while (true) {
             "4 — Спуститься на улицу Понивиля\n" +
             "5 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
 
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Фабрика Погоды";
+            room = "Фабрика Погоды"
         } else if (choice === "2") {
-            room = "Клаудсиум";
+            room = "Клаудсиум"
         } else if (choice === "3") {
-            room = "дом Радуги Дэш";
+            room = "дом Радуги Дэш"
         } else if (choice === "4") {
-            room = "Улица Понивиля";
+            room = "Улица Понивиля"
         } else if (choice === "5") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого варианта нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Фабрика Погоды") {
@@ -241,20 +264,20 @@ while (true) {
             "3 — Выйти\n" +
             "4 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
 
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Завод";
+            room = "Завод"
         } else if (choice === "2") {
-            room = "Кабинет Директора";
+            room = "Кабинет Директора"
         } else if (choice === "3") {
-            room = "Клаудсейл";
+            room = "Клаудсейл"
         } else if (choice === "4") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого варианта нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Завод") {
@@ -264,16 +287,16 @@ while (true) {
             "1 — Завершить разговор\n" +
             "2 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
 
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Фабрика Погоды";
+            room = "Фабрика Погоды"
         } else if (choice === "2") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого прохода нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Кабинет Директора") {
@@ -285,9 +308,9 @@ while (true) {
             "3 — Выйти\n" +
             "4 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
             const choice = prompt(
                 "КАБИНЕТ ДИРЕКТОРА\n" +
@@ -295,15 +318,15 @@ while (true) {
                 "1 — Выйти\n" +
                 "3 - Проверить рюкзак\n" +
                 "0 — Завершить игру"
-            );
+            )
             if (choice === "0" || choice === null) {
-                break;
+                break
             } else if (choice === "1") {
-                room = "Кабинет Директора";
+                room = "Кабинет Директора"
             } else if (choice === "3") {
-                showInventory();
+                showInventory()
             } else {
-                alert("Такого прохода нет.");
+                alert("Такого прохода нет.")
             }
         } else if (choice === "2") {
             const choice = prompt(
@@ -313,34 +336,34 @@ while (true) {
                 "2 — Выйти\n" +
                 "3 - Проверить рюкзак\n" +
                 "0 — Завершить игру"
-            );
+            )
             if (choice === "0" || choice === null) {
-                break;
+                break
             } else if (choice === "1") {
                 if (inventory.includes("Крылатый кристалл")) {
-                    alert("тут пусто. Крылатый кристалл уже у вас.");
+                    alert("тут пусто. Крылатый кристалл уже у вас.")
                 } else {
-                    const takeKey = confirm("Вы нашли Крылатый кристалл. Взять его?");
+                    const takeKey = confirm("Вы нашли Крылатый кристалл. Взять его?")
 
                     if (takeKey === true) {
-                        inventory.push("Крылатый кристалл");
+                        inventory.push("Крылатый кристалл")
                     } else {
-                        alert("Вы Крылатый кристалл на кровати.");
+                        alert("Вы Крылатый кристалл на кровати.")
                     }
                 }
             } else if (choice === "2") {
-                room = "Фабрика Погоды";
+                room = "Фабрика Погоды"
             } else if (choice === "3") {
-                showInventory();
+                showInventory()
             } else {
-                alert("Такого прохода нет.");
+                alert("Такого варианта нет.")
             }
         } else if (choice === "3") {
-            room = "Фабрика Погоды";
+            room = "Фабрика Погоды"
         } else if (choice === "4") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого прохода нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "дом Радуги Дэш") {
@@ -351,17 +374,17 @@ while (true) {
             "2 — Выйти из дома\n" +
             "3 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
             room = "Комната дэш"
         } else if (choice === "2") {
-            room = "Клаудсейл";
+            room = "Клаудсейл"
         } else if (choice === "3") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого прохода нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Комната дэш") {
@@ -372,15 +395,15 @@ while (true) {
             "1 — Выйти из дома\n" +
             "2 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Клаудсейл";
+            room = "Клаудсейл"
         } else if (choice === "2") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого прохода нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Клаудсиум") {
@@ -391,16 +414,16 @@ while (true) {
             "1 — Выйти\n" +
             "2 - Проверить рюкзак\n" +
             "0 — Завершить игру"
-        );
+        )
 
         if (choice === "0" || choice === null) {
-            break;
+            break
         } else if (choice === "1") {
-            room = "Клаудсейл";
+            room = "Клаудсейл"
         } else if (choice === "2") {
-            showInventory();
+            showInventory()
         } else {
-            alert("Такого прохода нет.");
+            alert("Такого варианта нет.")
         }
     }
     else if (room === "Бутик Рарити") {
@@ -413,13 +436,13 @@ while (true) {
                 "0 — Завершить игру"
             )
             if (choice === "0" || choice === null) {
-                break;
+                break
             } else if (choice === "1") {
-                room = "Улица Понивиля";
+                room = "Улица Понивиля"
             } else if (choice === "2") {
-                showInventory();
+                showInventory()
             } else {
-                alert("Такого варианта нет.");
+                alert("Такого варианта нет.")
             }
         } else {
             const choice = prompt(
@@ -429,9 +452,9 @@ while (true) {
                 "2 — Выйти из Бутика\n" +
                 "3 - Проверить рюкзак\n" +
                 "0 — Завершить игру"
-            );
+            )
             if (choice === "0" || choice === null) {
-                break;
+                break
             } else if (choice === "1") {
                 alert("Эпл Джек: Я верю что ты вернешь магию")
                 alert("Пинки Пай: ЧТО? МАГИЯ ПРОПАЛА?!")
@@ -445,7 +468,7 @@ while (true) {
                     "0 — Завершить игру"
                 )
                 if (choice === "0" || choice === null) {
-                    break;
+                    break
                 } else if (choice === "1") {
                     const choice = prompt(
                         "БУТТИК РАРИТИ\n" +
@@ -455,8 +478,45 @@ while (true) {
                         "0 — Завершить игру"
                     )
                     if (choice === "0" || choice === null) {
-                        break;
+                        break
                     } else if (choice === "1") {
+                        while (true) {
+                            const choice = prompt(
+                                "БУТТИК РАРИТИ\n" +
+                                "Так, под какой тканью он...\n" +
+                                "1 — Под желтой\n" +
+                                "2 — Под зеленой\n" +
+                                "3 — Под нефритовой\n" +
+                                "4 — Выйти\n" +
+                                "0 — Завершить игру"
+                            )
+                            if (choice === "0" || choice === null) {
+                                break
+                            } else if (choice === "3") {
+                                if (inventory.includes("c")) {
+                                    alert("Тут пусто. Магический самоцвет уже у вас.")
+                                } else {
+                                    const takeKey = confirm("Вы нашли Магический самоцвет. Взять его?")
+                                    if (takeKey === true) {
+                                        inventory.push("Магический самоцвет")
+                                        alert("Магический самоцвет у вас!")
+                                    } else {
+                                        alert("Вы оставили Магический самоцвет.")
+                                    }
+                                }
+                            } else if (choice === "2") {
+                                alert("Тут ничего нет")
+                            } else if (choice === "1") {
+                                alert("Тут ничего нет")
+                            } else if (choice === "4") {
+                                room = "Бутик Рарити"
+                            } else {
+                                alert("Такого варианта нет.")
+                            }
+                        }
+                    }
+                } else if (choice === "2") {
+                    while (true) {
                         const choice = prompt(
                             "БУТТИК РАРИТИ\n" +
                             "Так, под какой тканью он...\n" +
@@ -467,76 +527,273 @@ while (true) {
                             "0 — Завершить игру"
                         )
                         if (choice === "0" || choice === null) {
-                            break;
+                            room = "выход"
+                            break
                         } else if (choice === "3") {
-                            if (inventory.includes("c")) {
-                                alert("Тут пусто. Магический самоцвет уже у вас.");
+                            if (inventory.includes("Магический самоцвет")) {
+                                alert("Тут пусто. Магический самоцвет уже у вас.")
                             } else {
                                 const takeKey = confirm("Вы нашли Магический самоцвет. Взять его?")
                                 if (takeKey === true) {
-                                    inventory.push("Магический самоцвет");
-                                    alert("Магический самоцвет у вас!");
+                                    inventory.push("Магический самоцвет")
+                                    alert("Магический самоцвет у вас!")
                                 } else {
-                                    alert("Вы оставили Магический самоцвет.");
+                                    alert("Вы оставили Магический самоцвет.")
                                 }
                             }
+                            break
                         } else if (choice === "2") {
                             alert("Тут ничего нет")
                         } else if (choice === "1") {
                             alert("Тут ничего нет")
                         } else if (choice === "4") {
                             room = "Бутик Рарити"
+                            break
                         } else {
-                            alert("Такого прохода нет.");
+                            alert("Такого варианта нет.")
                         }
-                    }
-                } else if (choice === "2") {
-                    const choice = prompt(
-                        "БУТТИК РАРИТИ\n" +
-                        "Так, под какой тканью он...\n" +
-                        "1 — Под желтой\n" +
-                        "2 — Под зеленой\n" +
-                        "3 — Под нефритовой\n" +
-                        "4 — Выйти\n" +
-                        "0 — Завершить игру"
-                    )
-                    if (choice === "0" || choice === null) {
-                        break;
-                    } else if (choice === "3") {
-                        if (inventory.includes("Магический самоцвет")) {
-                            alert("Тут пусто. Магический самоцвет уже у вас.");
-                        } else {
-                            const takeKey = confirm("Вы нашли Магический самоцвет. Взять его?")
-                            if (takeKey === true) {
-                                inventory.push("Магический самоцвет");
-                                alert("Магический самоцвет у вас!");
-                            } else {
-                                alert("Вы оставили Магический самоцвет.");
-                            }
-                        }
-                    } else if (choice === "2") {
-                        alert("Тут ничего нет")
-                    } else if (choice === "1") {
-                        alert("Тут ничего нет")
-                    } else if (choice === "4") {
-                        room = "Бутик Рарити"
-                    } else {
-                        alert("Такого прохода нет.");
                     }
                 } else if (choice === "3") {
-                    showInventory();
+                    showInventory()
                 } else {
-                    alert("Такого прохода нет.");
+                    alert("Такого варианта нет.")
                 }
             } else if (choice === "2") {
-                room = "Улица Понивиля";
+                room = "Улица Понивиля"
             } else if (choice === "3") {
-                showInventory();
+                showInventory()
             } else {
-                alert("Такого варианта нет.");
+                alert("Такого варианта нет.")
             }
         }
     }
-}
+    else if (room === "Королевская библиотека") {
+        const choice = prompt(
+            "КОРОЛЕВСКАЯ БИБИЛИОТЕКА\n" +
+            "1 — Подняться на второй этаж\n" +
+            "2 — Спуститься в подвал\n" +
+            "3 — Подойти к книжным полкам\n" +
+            "4 — Выйти из библиотеки\n" +
+            "5 - Проверить рюкзак\n" +
+            "0 — Завершить игру"
+        )
 
-alert("Игра завершена.");
+        if (choice === "0" || choice === null) {
+            break
+        }
+        else if (choice === "1") {
+            room = "Второй этаж"
+        }
+        else if (choice === "2") {
+            room = "Подвал"
+        }
+        else if (choice === "3") {
+            room = "Книжная полка"
+        }
+        else if (choice === "4") {
+            room = "Улица Понивиля"
+        }
+        else if (choice === "5") {
+            showInventory()
+        }
+        else {
+            alert("Такого варианта нет.")
+        }
+    }
+    else if (room === "Второй этаж") {
+        const choice = prompt(
+            "ВТОРОЙ ЭТАЖ\n" +
+            "Перед вами ряды книжных полок и зона отдыха. Жаль, что нет времени на поиски тут\n" +
+            "1 — Вернуться\n" +
+            "2 - Проверить рюкзак\n" +
+            "0 — Завершить игру"
+        )
+
+        if (choice === "0" || choice === null) {
+            break
+        } else if (choice === "1") {
+            room = "Королевская библиотека"
+        } else if (choice === "2") {
+            showInventory()
+        } else {
+            alert("Такого варианта нет.")
+        }
+    }
+    else if (room === "Подвал") {
+        const choice = prompt(
+            "ПОДВАЛ\n" +
+            "Как и во всех играх здесь явно что-то есть..\n" +
+            "1 — Заглянуть в бочки\n" +
+            "2 — Осмотреть ящик в углу\n" +
+            "3 — Заглянуть под выпирающую половицу\n" +
+            "4 — Проверить рюкзак\n" +
+            "5 — Вернуться в библиотеку\n" +
+            "0 — Завершить игру"
+        )
+
+        if (choice === "0" || choice === null) {
+            break
+        }
+        else if (choice === "1") {
+            const subChoice = prompt(
+                "ПОДВАЛ (БОЧКИ)\n" +
+                "В бочках знаменитый яблочный сок от семьи Эпл.\n" +
+                "Больше ничего.\n" +
+                "1 — Вернуться\n" +
+                "2 — Проверить рюкзак\n" +
+                "0 — Завершить игру"
+            )
+            if (subChoice === "0" || subChoice === null) {
+                break
+            } else if (subChoice === "2") {
+                showInventory()
+            }
+        }
+        else if (choice === "2") {
+            const subChoice = prompt(
+                "ПОДВАЛ (ЯЩИК)\n" +
+                "В ящике есть лишь какая-то записка\n" +
+                "1 — Осмотреть записку\n" +
+                "2 — Вернуться\n" +
+                "3 — Проверить рюкзак\n" +
+                "0 — Завершить игру"
+            )
+            if (subChoice === "0" || subChoice === null) {
+                break
+            } else if (subChoice === "1") {
+                if (inventory.includes("Записка")) {
+                    alert("Тут пусто. Записка уже у вас.")
+                } else {
+                    const takeKey = confirm("Прочитать записку?")
+                    if (takeKey === true) {
+                        inventory.push("Записка")
+                        alert("«В час великого испытания судьба Эквестрии окажется в руках лишь одной волшебницы. Но горе ей, если она решит, что великий Кристалл подчинится обычному колдовству. Пророчество гласит: если призвать Кристалл лишь силой разума и книжных заклинаний, магия вспыхнет лишь наполовину. Такой свет обманчив — он продержится лишь временно, и когда угаснет последняя искра, вечная тьма поглотит наш мир навсегда. Чтобы зажечь Кристалл на всю его мощь и подарить Эквестрии вечный мир, избранная должна совершить невозможное: объединить силу своего разума с силой своего сердца. Ключ к этому сокрыт в древнем Свитке Истинной Гармонии. Только строки этого свитка укажут, как пробудить внутри себя Магию Дружбы и превратить любовь к близким в нерушимый свет.»")
+                    } else {
+                        alert("Вы решили не читать записку.")
+                    }
+                }
+            } else if (subChoice === "3") {
+                showInventory()
+            }
+        }
+        else if (choice === "3") {
+            if (inventory.includes("Ключ")) {
+                alert("Тут пусто. Ключ уже у вас.")
+            } else {
+                const takeKey = confirm("Взять ключ?")
+                if (takeKey === true) {
+                    inventory.push("Ключ")
+                    alert("Теперь можно открыть Храм Гармонии!")
+                } else {
+                    alert("Вы оставили ключ.")
+                }
+            }
+        }
+        else if (choice === "4") {
+            showInventory()
+        }
+        else if (choice === "5") {
+            room = "Королевская библиотека"
+        }
+        else {
+            alert("Такого варианта нет.")
+        }
+    }
+    else if (room === "Книжная полка") {
+        const choice = prompt(
+            "КНИЖНЫЕ ПОЛКИ\n" +
+            "Тут книг больше чем в библиотеки Искорки\n" +
+            "1 — Взять книгу\n" +
+            "2 - Проверить рюкзак\n" +
+            "3 - Выйти\n" +
+            "0 — Завершить игру"
+        )
+
+        if (choice === "0" || choice === null) {
+            break
+        } else if (choice === "1") {
+            if (inventory.includes("Свиток Истинной Гармонии")) {
+                alert("Тут пусто. Свиток Истинной Гармонии уже у вас.")
+            } else {
+                const takeKey = confirm("Вы нашли Свиток Истинной Гармонии. Взять его?")
+                if (takeKey === true) {
+                    inventory.push("Свиток Истинной Гармонии")
+                    alert("Свиток Истинной Гармонии у вас!")
+                } else {
+                    alert("Вы оставили Свиток Истинной Гармонии.")
+                }
+            }
+        } else if (choice === "2") {
+            showInventory()
+        } else if (choice === "3") {
+            room = "Королевская библиотека"
+        } else {
+            alert("Такого варианта нет.")
+        }
+    }
+    else if (room === "Храм Гармонии") {
+        if (inventory.includes("Ключ")) {
+            const choice = prompt(
+                "ХРАМ ГАРМОНИИ\n" +
+                "Пора восстановить магию\n" +
+                "1 — Подойти к Кристаллу магии\n" +
+                "2 — Проверить рюкзак\n" +
+                "3 — Выйти\n" +
+                "0 — Завершить игру"
+            )
+            if (choice === "0" || choice === null) {
+                break
+            } else if (choice === "1") {
+                room = "Кристаллл"
+            } else if (choice === "3") {
+                room = "Улица Понивиля"
+            } else if (choice === "2") {
+                showInventory()
+            } else {
+                alert("Такого варианта нет.")
+            }
+            if (room === "Кристаллл") {
+                const hasAllItems = inventory.includes("Лунный цветок") &&
+                    inventory.includes("Крылатый кристалл") &&
+                    inventory.includes("Магический самоцвет")
+
+                const hasScroll = inventory.includes("Записка")
+
+                if (hasAllItems) {
+                    if (hasScroll) {
+                        // КОНЦОВКА 1
+                        alert(
+                            "МАГИЯ ВОССТАНОВЛЕНА ПОЛНОСТЬЮ!\n\n" +
+                            "Искорка объединила силу своего разума со знанием из Древнего Свитка.\n" +
+                            "Магия вспыхнула ярким, неземным светом и вернулась в Эквестрию НАВСЕГДА!\n" +
+                            "Вы прошли игру на идеальную концовку!"
+                        )
+                    } else {
+                        // КОНЦОВКА 2
+                        alert(
+                            "ПОТЕРЯННОЕ ПРОРОЧЕСТВО\n\n" +
+                            "Вы нашли все предметы, и магия вернулась... но лишь НАПОЛОВИНУ.\n" +
+                            "Без Древнего Свитка заклинание оказалось нестабильным.\n" +
+                            "Этот свет продержится лишь временно. Попробуйте переиграть!"
+                        )
+                    }
+                    break
+                }
+                else {
+                    // КОНЦОВКА 3
+                    alert(
+                        "ВЕЧНАЯ ТЬМА\n\n" +
+                        "Вы пришли в Храм Гармонии, но не хватило артефактов для восстановления баланса.\n" +
+                        "Магия ПОЛНОСТЬЮ ИСЧЕЗЛА. Пони навсегда лишились своих сил,\n" +
+                        "а замок погрузился в непроглядную тьму. Попробуйте снова!"
+                    )
+                    break  // Выход из главного цикла (завершение игры)
+                }
+            }
+        } else {
+            alert("У вас нет ключа")
+            room = "Улица Понивиля"
+        }
+    }
+}
+alert("Игра завершена.") 
