@@ -771,7 +771,7 @@ while (true) {
                     inventory.includes("Крылатый кристалл") &&
                     inventory.includes("Магический самоцвет")
 
-                const hasScroll = inventory.includes("Записка")
+                const hasScroll = inventory.includes("Свиток Истинной Гармонии")
 
                 if (hasAllItems) {
                     if (hasScroll) {
